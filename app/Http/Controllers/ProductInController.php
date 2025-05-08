@@ -52,7 +52,6 @@ class ProductInController extends Controller
             'prIn_Unit_Price' => $request->prIn_Unit_Price,
             'prIn_TotalPrice' => $totalPrice,
         ]);
-
         // Redirect to the index with a success message
         return redirect()->route('productin.index')->with('success', 'Product In added successfully.');
     }

@@ -16,7 +16,7 @@ class ProductIn extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        'product_id',
+        'PCode',
         'prIn_Date',
         'prIn_Quantity',
         'prIn_Unit_Price',
