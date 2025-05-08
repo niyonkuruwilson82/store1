@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('productin', ProductInController::class); // Resource route already includes edit and update
 
 
+
 });
 
 // Default Authentication Routes (Login, Register, etc.)

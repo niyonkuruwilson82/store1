@@ -1,7 +1,5 @@
 <?php
-// app/Models/ProductIn.php
-
-// app/Models/ProductIn.php
+/// app/Models/ProductIn.php
 
 namespace App\Models;
 
@@ -11,9 +9,14 @@ class ProductIn extends Model
 {
     // Force the correct table name
     protected $table = 'product_in';
-    
+
+    // Set the primary key if it's not 'id'
+    protected $primaryKey = 'ProductIn_id';
+    public $incrementing = false;
+    protected $keyType = 'string';
+
     protected $fillable = [
-        'PCode',
+        'product_id',
         'prIn_Date',
         'prIn_Quantity',
         'prIn_Unit_Price',

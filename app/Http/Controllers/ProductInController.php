@@ -73,6 +73,7 @@ class ProductInController extends Controller
     }
 
     // Update the specified ProductIn record in the database
+    // Update the specified ProductIn record in the database
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -85,7 +86,7 @@ class ProductInController extends Controller
         // Calculate the total price
         $totalPrice = $request->prIn_Quantity * $request->prIn_Unit_Price;
 
-        // Find the ProductIn record and update it
+        // Find the ProductIn record by its primary key
         $productIn = ProductIn::findOrFail($id);
         $productIn->update([
             'PCode' => $request->PCode,

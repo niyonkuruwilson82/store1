@@ -21,18 +21,19 @@
         <tbody>
             @forelse($productIns as $productIn)
                 <tr>
-                    <td>{{ $productIn->id }}</td>
+                    <td>{{ $productIn->ProductIn_id}}</td>
                     <td>{{ $productIn->product?->PName ?? 'No Product Name' }}</td>
                     <td>{{ $productIn->prIn_Date }}</td>
                     <td>{{ $productIn->prIn_Quantity }}</td>
                     <td>{{ $productIn->prIn_Unit_Price }}</td>
                     <td>{{ $productIn->prIn_TotalPrice }}</td>
                     <td class="text-center">
-                        <a href="{{ route('productin.edit', ['productin' => $productIn->id]) }}" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="{{ route('productin.edit', ['productin' => $productIn->ProductIn_id]) }}" class="btn btn-warning btn-sm">Edit</a>
+
 
                     </td>
                     <td class="text-center">
-                        <form action="{{ route('productin.destroy', $productIn->id) }}" method="POST" onsubmit="return confirm('Are you sure?');">
+                        <form action="{{ route('productin.destroy', $productIn->ProductIn_id) }}" method="POST" onsubmit="return confirm('Are you sure?');">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger btn-sm">Delete</button>
